@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Expense Tracker</h1>
+
+      <!-- Expense Form -->
+      <h2>Add Expense</h2>
+      <form id="expense-form">
+        <div class="input-group">
+          <label for="expense-description">Description</label>
+          <input type="text" id="expense-description" required />
+        </div>
+        <div class="input-group">
+          <label for="expense-amount">Amount</label>
+          <input type="number" id="expense-amount" required />
+        </div>
+        <div class="input-group">
+          <label for="expense-category">Category</label>
+          <select id="expense-category">
+            <option value="Housing">Housing</option>
+            <option value="Food">Food</option>
+            <option value="Transportation">Transportation</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        <div class="button-group">
+          <button type="submit">Add Expense</button>
+        </div>
+      </form>
+
+      <!-- Income Form -->
+      <h2>Add Income</h2>
+      <div class="input-group">
+        <label for="income-description">Description</label>
+        <input type="text" id="income-description" />
+      </div>
+      <div class="input-group">
+        <label for="income-amount">Amount</label>
+        <input type="number" id="income-amount" />
+      </div>
+      <div class="button-group">
+        <button id="add-income-button">Add Income</button>
+      </div>
+
+      <!-- Transaction History Table -->
+      <h2>Transaction History</h2>
+      <table id="transaction-history">
+        <thead>
+          <tr>
+            <th>Description</th>
+            <th>Category</th>
+            <th>Amount (₱)</th>
+            <th>Type</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Transactions will appear here -->
+        </tbody>
+      </table>
+
+      <!-- Summary Section in the transaction history -->
+      <div class="summary">
+        <p>Total Expenses: ₱<span id="total-expenses">0</span></p>
+        <p>Total Income: ₱<span id="total-income">0</span></p>
+        <p>Balance: ₱<span id="balance">0</span></p>
+      </div>
+
+      <!-- Clear All Button -->
+      <div class="clear-button-group">
+        <button id="clear-all">Clear All</button>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
